@@ -11,131 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- Custom CSS -->
-    <style>
-        .logo {
-            height: 55px;
-            width: 55px;
-            border-radius: 9px;
-        }
-
-        .form-inline input {
-            width: 100%;
-        }
-
-        .topbar {
-            background-color: #f6f5f2;
-        }
-
-        @media (max-width: 991px) {
-            .topbar {
-                display: none;
-            }
-        }
-
-        .topbar .container {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        }
-
-        .topbar__left {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        }
-
-        .topbar__left p {
-            font-size: 12px;
-            font-weight: 500;
-            color: #6e7673;
-            margin: 0;
-        }
-
-        .topbar__social {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            margin-right: 30px;
-        }
-
-        .topbar__social a {
-            color: #6e7673;
-            font-size: 12px;
-            -webkit-transition: all 500ms ease;
-            transition: all 500ms ease;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            line-height: 38px;
-        }
-
-        .topbar__social a:hover {
-            color: var(--thm-primary);
-        }
-
-        .topbar__social a+a {
-            margin-left: 20px;
-        }
-
-        .topbar__right {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-        }
-
-        .topbar__right>a {
-            color: #6e7673;
-            font-size: 12px;
-            -webkit-transition: all 500ms ease;
-            transition: all 500ms ease;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            font-weight: 500;
-        }
-
-        .topbar__right>a+a {
-            margin-left: 30px;
-        }
-
-        .topbar__right>a>i {
-            font-size: 14px;
-            color: var(--thm-base);
-            -webkit-transition: all 500ms ease;
-            transition: all 500ms ease;
-            margin-right: 10px;
-        }
-
-        .topbar__right>a:hover {
-            color: var(--thm-base);
-        }
-
-        .topbar__right>a:hover>i {
-            color: var(--thm-black);
-        }
-    </style>
 </head>
 
 <body>
@@ -184,10 +59,9 @@
     <button onclick="myFunction()">Try it</button>
     <script>
         function myFunction() {
-          let person = prompt("Please enter your Email", "Enter your Email");
+          let email = prompt("Please enter your Email", "Enter your Email");
           if (person != null) {
-            document.getElementById("demo").innerHTML =
-            "Hello " + person + "! How are you today?";
+            document.getElementById("Test_Date").value = "2019-02-04";
           }
         }
         </script>
