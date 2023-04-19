@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <!-- Custom CSS -->
     <style>
         .logo {
             height: 55px;
@@ -139,7 +138,7 @@
 </head>
 
 <body>
-    <header>
+<header>
         <div class="topbar">
             <div class="container">
                 <div class="topbar__left">
@@ -172,7 +171,7 @@
                         <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">period dairy</a>
+                        <a class="nav-link" href="#">period dairy</a>
                     </li>
                 </ul>
                 <form class="form-inline ml-auto">
@@ -182,14 +181,70 @@
             </div>
         </nav>
     </header>
-    <main>
-        <video autoplay muted width="100%">
-            <source src="img/coverimg.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </main>
+    <h1>Set Reminder</h1>
+    <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+      <div class="form-group row">
+        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
+          <?php echo $errEmail; ?>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputUser" class="col-sm-2 col-form-label">User Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputUser" name="user" placeholder="Username">
+          <?php echo $errName; ?>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
+          <?php echo $errPass; ?>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+          <input type="submit" value="Sign in" name="submit" class="btn btn-primary"/>
+        </div>
+      </div>
+    </form>
+    <form method="post" action="">
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br><br>
+        <label for="date">Date:</label>
+        <input type="date" name="date" required><br><br>
+        <input type="submit" name="submit" value="Set Reminder">
+    </form>
 
-    <!-- Bootstrap JS -->
+    <?php
+    // Check if the form is submitted
+    if (isset($_POST['submit'])) {
+        // Get input values
+        $email = $_POST['email'];
+        $date = $_POST['date'];
+
+        // Calculate the reminder date after 25 days
+        $reminder_date = date('Y-m-d', strtotime($date . ' + 25 days'));
+
+        // Set email headers
+        $to = $email;
+        $subject = 'Reminder';
+        $message = 'This is a reminder for your event on ' . $date . '.';
+        $headers = 'From: batrayukti16@gmail.com' . "\r\n" .
+            'Reply-To: batrayukti16@gmail.com ' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+
+        // Check if current date is greater than reminder date, and if so, send the email
+        if (strtotime($reminder_date) < strtotime(date('Y-m-d'))) {
+            mail($to, $subject, $message, $headers);
+            echo 'Reminder email has been sent to ' . $email . '.';
+        } else {
+            echo 'Reminder email will be sent on ' . $reminder_date . '.';
+        }
+    }
+    ?>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
