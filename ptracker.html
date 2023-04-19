@@ -180,17 +180,21 @@
             </form>
         </div>
     </nav>
-    <main>
-		<video autoplay muted width="100%">
-			<source src="img/coverimg.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
-	</main>
-
-    <!-- Bootstrap JS -->
+    <h3>want to get reminder for your periods tym</h3>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+          let person = prompt("Please enter your Email", "Enter your Email");
+          if (person != null) {
+            document.getElementById("demo").innerHTML =
+            "Hello " + person + "! How are you today?";
+          }
+        }
+        </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
