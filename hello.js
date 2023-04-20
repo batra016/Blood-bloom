@@ -39,3 +39,4 @@ modalOverlay.addEventListener('click', () => {
     modal.style.display = 'none';
     modalOverlay.style.display = 'none';
 });
+
