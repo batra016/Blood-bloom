@@ -14,7 +14,7 @@
     <title>Blood-Bloom</title>
     <style>
         body {
-            background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+            background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(197, 182, 177));
         }
 
         .container_form {
@@ -32,7 +32,7 @@
             margin-bottom: 30px;
         }
 
-         label {
+        label {
             display: block;
             margin-bottom: 10px;
         }
@@ -57,7 +57,8 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #781fc6;
+            align-items: center;
         }
 
         .results {
@@ -74,140 +75,6 @@
 
         .results span {
             font-weight: bold;
-        }
-
-        #modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        #modal h2 {
-            margin-top: 0;
-        }
-
-        #modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        #close-btn {
-            position: absolute;
-            right: 12px;
-            top: 7px;
-            font-size: 15px;
-            line-height:7 px;
-            color: #777;
-            font-family: "Helvetica";
-        }
-
-        #modal-btn{
-            margin: 50px 500px ;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:focus {
-            outline: none;
-        }
-
-        button:hover {
-            background-color: #0069d9;
-        }
-
-        button:active {
-            background-color: #005cbf;
-        } */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-            display: none;
-        }
-
-        .modal.open .modal-overlay {
-            display: block;
-        }
-
-        #modal {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            z-index: 2;
-            display: none;
-        }
-
-        .modal.open #modal {
-            display: block;
-        }
-
-        #close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 24px;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
-
-        .modal-form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="date"] {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        button[type="submit"] {
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #0069d9;
         }
     </style>
 </head>
@@ -281,29 +148,57 @@
         <br>
 
         <h1>Never miss a period again - get a friendly reminder!"</h1>
-        <button id="modal-btn">click to get reminder</button>
-        <div class="modal-overlay"></div>
-
-        <div id="modal">
-            <button id="close-btn">&times;></button>
-            <form class="modal-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="date">Date:</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <button type="submit" class="submit1">Submit</button>
-            </form>
+        <br>
+        <div class="text-center">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                <h5>Click for reminder</h5>
+            </button>
         </div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formmail">
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="First name">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <div class="text-center">
+                                <input type="submit" class="btn btn-primary " id="mailbutton" value="Send Email">
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </section>
     <section class="tracker_section">
+        <br>
         <div class="container_form">
             <h1>Period Tracker</h1>
             <form id="tracker">
@@ -315,8 +210,9 @@
 
                 <label for="period-length">Period Length:</label>
                 <input type="number" id="period-length" name="period-length"><br>
-
-                <input type="submit" value="Submit">
+                <div class="text-center">
+                <input type="submit" class="btn btn-primary" value="Get Result">
+            </div>
             </form>
 
             <div class="results">
@@ -330,7 +226,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-9 text-center">
-                    <a  href="index.html">
+                    <a href="index.html">
                         <img class="logoimg" src="img/logo.png" alt=""></a>
                     <br>
                     <div class="footer-site-logo mb-4">
@@ -372,12 +268,19 @@
             </div>
         </div>
     </footer>
-    <!-- <script src="hi.js"></script> -->
-    <script src="hello.js"></script>
+    <script src="js/ptracker.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('gttwgtw5jokUZHCCS')
+    </script>
+
+
+
 
 </body>
 

@@ -20,23 +20,23 @@ form.addEventListener('submit', function (e) {
 
     results.style.display = 'block';
 });
-const modalBtn = document.getElementById('modal-btn');
-const modal = document.getElementById('modal');
-const modalOverlay = document.getElementById('modal-overlay');
-const closeBtn = document.getElementById('close-btn');
+const btn = document.getElementById('mailbutton');
 
-modalBtn.addEventListener('click', () => {
-    modal.style.display = 'block';
-    modalOverlay.style.display = 'block';
+document.getElementById('formmail')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_u8efwdc';
+
+   emailjs.sendForm(serviceID, templateID, formmail)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
 });
-
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-    modalOverlay.style.display = 'none';
-});
-
-modalOverlay.addEventListener('click', () => {
-    modal.style.display = 'none';
-    modalOverlay.style.display = 'none';
-});
-
