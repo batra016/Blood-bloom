@@ -1,4 +1,3 @@
-
 .logo {
     height: 55px;
     width: 55px;
@@ -121,4 +120,95 @@
 
 .topbar__right>a:hover>i {
     color: var(--thm-black);
+}
+
+.evebanner img {
+    width: 100%;
+}
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+a,
+a:hover {
+    text-decoration: none !important;
+}
+
+.content {
+    height: 70vh;
+}
+
+.footer-16371 {
+    background-color: #15b8ff;
+    padding: 5rem 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-16371 .footer-site-logo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.footer-16371 .footer-site-logo a {
+    color: #4200ff;
+}
+
+.footer-16371 .nav-links {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-16371 .nav-links li {
+    display: inline-block;
+}
+
+.footer-16371 .nav-links li a {
+    padding: 10px;
+    color: #000;
+}
+
+.footer-16371 .nav-links li a:hover {
+    color: #4200ff;
+}
+
+.footer-16371 .social h3 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+}
+
+.footer-16371 .social ul li {
+    display: inline-block;
+}
+
+.footer-16371 .social ul a{
+    display: inline-block;
+    padding: 10px;
+}
+
+.social .fb i{
+    color: #3742d0;
+
+}
+.social .pin i{
+    color: #dd4d5a;;
+
+}
+.social .in i{
+    color: #df588a;
+
+}
+.social .tw i{
+    color: #15b8ff;
+
+}
+.social .dr i{
+    color: #fa38c1;
+
+}
+.copyright{
+    color: #050404; 
 }
