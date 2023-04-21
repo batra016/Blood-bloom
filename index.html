@@ -11,6 +11,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- Custom CSS -->
+    <style>
+        .card1 {
+            margin-top: 100px;
+        }
+
+        a .icon {
+            min-width: 24px;
+            width: 24px;
+            height: 24px;
+            margin-left: 5px;
+            transform: translateX(var(--link-icon-translate));
+            opacity: var(--link-icon-opacity);
+            transition: all 0.3s;
+        }
+
+        .section-2 {
+            margin-top: 43px;
+            margin-bottom: 50px;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +39,7 @@
             <img class="logoimg" src="img/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-align-right text-dark"></i>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="mr-auto"></div>
@@ -66,7 +86,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">CONTACT US</a>
                 </li>
-                
+
             </ul>
         </div>
     </nav>
@@ -75,8 +95,122 @@
             <source src="img/coverimg.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <h1>xyz</h1>
-        
+        <section class="section-2  p-0">
+            <div class="cover">
+                <div class="content1 text-center">
+                    <h1>Our Outlooks</h1>
+                    <p class="text-secondary">"Expand your outlook and embrace new perspectives with our curated collection of articles and resources."</p>
+                </div>
+            </div>
+        </section>
+        <section class="cardall">
+            <div class="card-columns p-3">
+                <div class="card text-center card1">
+                    <div class="card-body">
+                        <img class="card-img-top" src="img/cards/periodtracking.jpg" width="200px" height="200px"alt="Card image cap">
+                        <h4 class="card-title p-3">Period Tracker</h4>
+                        <p class="card-text">"Stay on top of your cycle and feel empowered with our user-friendly period tracker."</p>
+                        <a href="veda.html" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img class="card-img-top" src="img/cards/helpcare.jpeg" width="250px"height="250px" alt="Card image cap">
+                        <h4 class="card-title p-3">Help & care</h4>
+                        <p class="card-text">Real men help during periods. Be a hero and show care and support for the important women in your life."</p>
+                        <a href="veda.html" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img class="card-img-top" src="img/cards/pads2.jpg" alt="Card image cap">
+                        <h4 class="card-title p-3">Quality check</h4>
+                        <p class="card-text">"Trust in the comfort and confidence of our sanitary pads, rigorously tested for quality to ensure maximum protection and peace of mind during your period."</p>
+                        <a href="veda.html" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="card bg-primary text-white text-center p-3">
+                    <h4 class="card-title p-2">BLOOD-BLOOM</h4>
+                    <blockquote class="blockquote mb-0">
+                        <p>"Empowering women, breaking silence on menstruation, embracing awareness, and living your best life. Join us."</p>
+                    </blockquote>
+                </div>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img class="card-img-top" src="img/cards/medicine.jpeg" alt="Card image cap">
+                        <h4 class="card-title p-3">Medicine & prescription</h4>
+                        <p class="card-text">Expert healthcare professionals provide personalized medicine and prescriptions tailored to your needs for optimal health and well-being."</p>
+                        <a href="veda.html" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="card text-center card1">
+                    <div class="card-body">
+                        <img class="card-img-top" src="img/cards/menopause.jpeg" width="200px" height="200px" alt="Card image cap">
+                        <h4 class="card-title p-3">Menopause</h4>
+                        <p class="card-text">"Embrace the next chapter of your life with confidence and grace, as our products and resources help you navigate the journey of menopause with ease."</p>
+                        <a href="veda.html" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img class="card-img-top" src="img/cards/awarness.jpeg" alt="Card image cap">
+                        <h4 class="card-title p-3">Awarness</h4>
+                        <p class="card-text">Join the menstrual awareness movement and empower yourself with knowledge to live your life to the fullest."</p>
+                        <a href="veda.html" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
     <footer class="footer-16371">
         <div class="container">
